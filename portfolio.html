@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mauricio Payán · Data Scientist</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+  * {
+    font-family: 'Raleway', sans-serif !important;
+  }
+
+  body {
+    padding-top: 56px;
+    font-weight: 500;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 900 !important;
+    color: #2e2e3e;
+  }
+
+  .btn {
+    font-weight: 600 !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Botones primarios y secundarios */
+  .btn-primary {
+    background-color: #6B8DB3 !important;
+    border-color: #6B8DB3 !important;
+    color: #fff !important;
+  }
+
+  .btn-primary:hover {
+    background-color: #7a7aaa !important;
+    border-color: #7a7aaa !important;
+  }
+
+  .btn-secondary {
+    background-color: #A3ABB8 !important;
+    border-color: #A3ABB8 !important;
+    color: #fff !important;
+  }
+
+  .btn-secondary:hover {
+    background-color: #aaaacc !important;
+    border-color: #aaaacc !important;
+  }
+
+  .about-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .about-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .about-section p {
+    color: #444;
+  }
+
+  .projects-section {
+    margin-bottom: 50px;
+  }
+  .projects-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  .card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-title {
+    font-size: 1.25rem;
+    color: #2e2e3e;
+  }
+  .card-text {
+    margin-bottom: 15px;
+    flex-grow: 1;
+    color: #444;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+
+  .skills-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+  .skills-section .card {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .skills-section .card-img-top {
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: 180px;
+    object-fit: contain;
+  }
+  .skills-section .card-body {
+    padding: 15px;
+  }
+  .skills-section .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .contact-section {
+    padding: 50px 0;
+    background-color: #223042;
+  }
+  .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff !important;
+  }
+  .contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  .social-icon {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  .social-icon:hover {
+    opacity: 0.7;
+  }
+  .contact-section a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .contact-section a:hover {
+    color: #ccc;
+  }
+
+  .navbar {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: #223042 !important;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+    font-weight: 700 !important;
+    color: #fff !important;
+  }
+
+  .navbar-nav .nav-link {
+    color: #ddd !important;
+    font-size: 0.95rem;
+    font-weight: 600 !important;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #fff !important;
+  }
+
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      background-color: #223042;
+    }
+  }
+
+  .lang-select {
+    background-color: #223042;
+    color: white;
+    border: 1px solid #6c757d;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-left: 12px;
+  }
+
+  /* Animaciones fade-in */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2 data-en="About" data-fr="À propos">About</h2>
+    <img src="images/about/1 (1).jpg" alt="About Me">
+    <p data-en="Statistics & Data Science graduate specialized in applied mathematics, statistical modeling, and machine learning. I'm passionate about uncovering hidden patterns and insights from data, working with high volume and complex datasets to turn raw numbers into meaningful, actionable knowledge."
+       data-fr="Diplômé en Statistiques et Science des données, spécialisé en mathématiques appliquées, modélisation statistique et machine learning. Passionné par la découverte de tendances et d'insights cachés dans les données, je travaille avec des jeux de données complexes et volumineux pour transformer des chiffres bruts en connaissances concrètes et exploitables.">
+      Statistics & Data Science graduate specialized in applied mathematics, statistical modeling, and machine learning. I'm passionate about uncovering hidden patterns and insights from data, working with high volume and complex datasets to turn raw numbers into meaningful, actionable knowledge.
+    </p>
+    <p data-en="I work with Python, R, SAS, and SQL to design and optimize models including regression, classification, ensemble methods, and data mining techniques. My approach balances analytical rigor with practical impact, building robust and interpretable solutions to real-world problems across diverse methodologies and data formats."
+       data-fr="Je travaille avec Python, R, SAS et SQL pour concevoir et optimiser des modèles incluant la régression, la classification, les méthodes d'ensemble et plusieurs techniques de data mining. Mon approche allie rigueur analytique et impact pratique, en construisant des solutions robustes et interprétables à des problèmes concrets, à travers diverses méthodologies et formats de données.">
+      I work with Python, R, SAS, and SQL to design and optimize models including regression, classification, ensemble methods, and data mining techniques. My approach balances analytical rigor with practical impact, building robust and interpretable solutions to real-world problems across diverse methodologies and data formats.
+    </p>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+  <div class="container">
+    <h2 class="text-center" data-en="Projects" data-fr="Projets">Projects</h2>
+    <div class="row d-flex">
+      <!-- Project 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Data Science Internship: "Machine Learning and Sound Simulations by Physical Models to help the Design of Musical Instruments"</h5>
+            <p class="card-text"
+               data-en="Joint project by the Laboratoire des Sciences du Numérique de Nantes and Yamaha Corporation, modeling acoustic-geometric relationships in brass instruments using physics-based simulations and machine learning."
+               data-fr="Projet conjoint du Laboratoire des Sciences du Numérique de Nantes et de Yamaha Corporation, modélisant les relations acoustico-géométriques dans les instruments à vent à l'aide de simulations physiques et du machine learning.">
+              Joint project by the Laboratoire des Sciences du Numérique de Nantes and Yamaha Corporation, modeling acoustic-geometric relationships in brass instruments using physics-based simulations and machine learning.
+            </p>
+            <div>
+              <a href="docs/Paper_ISMA2026.pdf" class="btn btn-primary" target="_blank" data-en="Read Paper" data-fr="Lire l'article">Read Paper</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title"
+                data-en="HomeFlix: A Movie Recommendation System"
+                data-fr="HomeFlix : Un Système de Recommandation de Films">
+              HomeFlix: A Movie Recommendation System
+            </h5>
+            <p class="card-text"
+               data-en="Full-stack movie recommendation system built with FastAPI, Streamlit, and DuckDB using real TMDB and Kaggle datasets. Implements collaborative filtering via SVD matrix factorization to generate personalized predictions. Deployed using a Docker Compose microservices architecture."
+               data-fr="Système de recommandation de films full-stack développé avec FastAPI, Streamlit et DuckDB, utilisant de vraies données TMDB et Kaggle. Implémente un filtrage collaboratif via la factorisation matricielle SVD pour générer des prédictions personnalisées. Déployé avec une architecture microservices Docker Compose.">
+              Full-stack movie recommendation system built with FastAPI, Streamlit, and DuckDB using real TMDB and Kaggle datasets. Implements collaborative filtering via SVD matrix factorization to generate personalized predictions. Deployed using a Docker Compose microservices architecture.
+            </p>
+            <div>
+              <a href="https://github.com/MPayanM/MAURICIO-Homeflix.git" class="btn btn-secondary" target="_blank" data-en="Source Code" data-fr="Code Source">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Macro Tracker</h5>
+            <p class="card-text"
+               data-en="Streamlit web app for personalized nutrition tracking. User provides biometric data and weight targets to compute caloric needs via Mifflin-St Jeor, macros are distributed following a customized breakdown. Features real-time Plotly visualization and trilingual support through a modular i18n architecture backed by a pandas data pipeline."
+               data-fr="Application web Streamlit pour le suivi nutritionnel personnalisé. L'utilisateur renseigne ses données biométriques et ses objectifs de poids pour calculer ses besoins caloriques via la formule Mifflin-St Jeor, avec une répartition adaptée des macros. Visualisation en temps réel avec Plotly et support trilingue via une architecture i18n modulaire.">
+              Streamlit web app for personalized nutrition tracking. User provides biometric data and weight targets to compute caloric needs via Mifflin-St Jeor, macros are distributed following a customized breakdown. Features real-time Plotly visualization and trilingual support through a modular i18n architecture backed by a pandas data pipeline.
+            </p>
+            <div>
+              <a href="https://mpayanm-mealprep.streamlit.app/" class="btn btn-primary" target="_blank" data-en="Live Demo" data-fr="Démo en direct">Live Demo</a>
+              <a href="https://github.com/MPayanM/mealprep.git" class="btn btn-secondary" target="_blank" data-en="Source Code" data-fr="Code Source">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section bg-white">
+  <div class="container">
+    <h2 class="text-center" data-en="Skills" data-fr="Compétences">Skills</h2>
+    <div class="row d-flex">
+      <!-- Skill 1 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/1.png" class="card-img-top" alt="Python">
+          <div class="card-body">
+            <h5 class="card-title">Python</h5>
+            <p class="card-text"
+               data-en="Solid command of data processing, machine learning, and visualization with libraries such as Pandas, Scikit-learn, Plotly, and Seaborn."
+               data-fr="Expertise en traitement de données, machine learning et visualisation avec des bibliothèques telles que Pandas, Scikit-learn, Plotly et Seaborn.">
+              Solid command of data processing, machine learning, and visualization with libraries such as Pandas, Scikit-learn, Plotly, and Seaborn.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 2 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/R.png" class="card-img-top" alt="R">
+          <div class="card-body">
+            <h5 class="card-title">R</h5>
+            <p class="card-text"
+               data-en="Strong expertise in statistical modeling, hypothesis testing, and large dataset handling. Extensive use of tidyverse, ggplot2, and caret."
+               data-fr="Compétences avancées en modélisation statistique, tests d'hypothèses et gestion de données de grand volume. Utilisation extensive de tidyverse, ggplot2 et caret.">
+              Strong expertise in statistical modeling, hypothesis testing, and large dataset handling. Extensive use of tidyverse, ggplot2, and caret.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 3 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/SAS.png" class="card-img-top" alt="SAS">
+          <div class="card-body">
+            <h5 class="card-title">SAS</h5>
+            <p class="card-text"
+               data-en="Proficiency in multiple procedures for data exploration and reporting, applied to complex statistical analysis and hypothesis testing."
+               data-fr="Maîtrise de plusieurs procédures pour l'exploration de données et le reporting, appliquées à des analyses statistiques complexes et des tests d'hypothèses.">
+              Proficiency in multiple procedures for data exploration and reporting, applied to complex statistical analysis and hypothesis testing.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 4 - SQL -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+          <div class="card-body">
+            <h5 class="card-title">SQL</h5>
+            <p class="card-text"
+               data-en="Proficient in complex queries for data extraction, transformation, and aggregation for exploratory analysis and data preparation."
+               data-fr="Maîtrise de requêtes complexes pour l'extraction, la transformation et l'agrégation de données, pour l'analyse exploratoire et la préparation des données.">
+              Proficient in complex queries for data extraction, transformation, and aggregation for exploratory analysis and data preparation.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 5 - Git/GitHub -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="icons/github.png" class="card-img-top" alt="Git/GitHub">
+          <div class="card-body">
+            <h5 class="card-title">Git / GitHub</h5>
+            <p class="card-text"
+               data-en="Used across multiple projects for tracking and collaborative development. Optimized workflows through branching strategies and GitHub Actions for an efficient framework."
+               data-fr="Utilisé dans plusieurs projets pour le suivi et le développement collaboratif. Optimisation des workflows via des stratégies de branches et GitHub Actions.">
+              Used across multiple projects for tracking and collaborative development. Optimized workflows through branching strategies and GitHub Actions for an efficient framework.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 6 - Data Storytelling -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
+          <div class="card-body">
+            <h5 class="card-title">Data Storytelling</h5>
+            <p class="card-text"
+               data-en="Strong focus on uncovering implicit patterns within data to extract meaningful insights and communicate them through compelling visual narratives."
+               data-fr="Identification de patterns et tendances implicites dans les données pour extraire des insights pertinents et les traduire en visualisations claires.">
+              Strong focus on uncovering implicit patterns within data to extract meaningful insights and communicate them through compelling visual narratives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section text-center text-white">
+  <div class="container">
+    <h2 data-en="Contact Me" data-fr="Contact">Contact Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <p><i class="fas fa-envelope"></i> mauriciopayanmarin@gmail.com</p>
+      </div>
+      <div class="col-lg-6">
+        <p><i class="fas fa-phone"></i> (+33) 06 66 55 85 86</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://www.linkedin.com/in/mauricio-payan" target="_blank">
+          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+          LinkedIn
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://github.com/MPayanM" target="_blank">
+          <img src="icons/github.png" alt="GitHub" class="social-icon">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sticky Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand" href="index.html">Mauricio Payán · Data Science &amp; ML</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about" data-en="About" data-fr="À propos">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects" data-en="Projects" data-fr="Projets">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills" data-en="Skills" data-fr="Compétences">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+        </li>
+      </ul>
+      <select id="langSelect" class="lang-select" onchange="setLanguage(this.value)">
+        <option value="en">🇬🇧 English</option>
+        <option value="fr">🇫🇷 Français</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll('[data-en]').forEach(function(el) {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+    document.documentElement.lang = lang;
+  }
+</script>
+
+<script>
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.card, #projects h2, #skills h2, #about img, #about p, #about h2').forEach(function(el) {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
